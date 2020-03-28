@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import random
 
 class uniform_dis:
     def __init__(self, a=0, b=1):
@@ -27,7 +28,7 @@ class uniform_dis:
         self.kurtosis = 9/5
         
     def __sample__(self, number_of_samples):
-        pass
+        for _ in ra
 
     def __pdf__(self): 
         return [(0, "for x < {}".format(self.a)), 
@@ -40,11 +41,19 @@ class uniform_dis:
                 (0, "for x > {}".format(self.b))]
 
 class normal_dis:
-    pass
+    def __init__(self, mean =0, std_dev=1):
+        self.mean=mean
+        self.std_dev=1
+    def __updateVal__(self):
+        self.var = self.std_dev**2
+        
+    def Zscore(self, x):
+        return (x-self.mean) / self.std_dev
 
+    def Zscore_to_x(self, z_score)
+        return self.mean + z_score*self.std_dev
 class lognormal_dis:
     pass
-
 class poisson:
     pass
 class gamma_dis:
@@ -57,9 +66,15 @@ class hypergeometric_dis:
     pass
 
 class bernoulli_dis:
-    pass
+    def __init__(self):
+        self.success_rate = 1
+        self.success_outcome = 1
+
 class binomial_dis:
-    pass
+    def __init__(self, n = 10, p = 1/2, o = 1):
+        self.trials = n
+        self.success_rate = p
+        self.success_outcome = o
 
 x = uniform_dis()
 x.__setAB__(10, 80)
