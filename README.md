@@ -1,0 +1,1 @@
+some python files about probability, distributions, PDF, CDF, random walks, markov chain, conditionals, bayes, etc etc
