@@ -52,6 +52,7 @@ class normal_dis:
 
     def Zscore_to_x(self, z_score)
         return self.mean + z_score*self.std_dev
+
 class lognormal_dis:
     pass
 class poisson:
@@ -71,10 +72,11 @@ class bernoulli_dis:
         self.success_outcome = 1
 
 class binomial_dis:
-    def __init__(self, n = 10, p = 1/2, o = 1):
+    def __init__(self, n = 10, p = 1/2):
         self.trials = n
         self.success_rate = p
-        self.success_outcome = o
 
+    def outcome_probability(success_num = 0):
+        return 
 x = uniform_dis()
 x.__setAB__(10, 80)
